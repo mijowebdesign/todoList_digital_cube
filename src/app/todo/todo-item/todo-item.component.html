@@ -1,0 +1,19 @@
+
+            <li class="list-group-item"
+            style="cursor:pointer"
+            (click)="onDone()"
+            >
+            <span [ngClass]="{ 'glyphicon glyphicon-ok': mark }" aria-hidden="true"></span>
+            {{todo.content}} 
+            <span class="hover-cursor pull-right">
+                    <span id="{{todo.id}}" 
+                    class="btn btn-xs btn-danger"
+                    (click)="onDel()" >Delete </span>
+            </span>
+            </li>
+            
+
+           
+       
+        
+    

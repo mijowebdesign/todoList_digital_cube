@@ -1,0 +1,9 @@
+li {
+    padding-left:50px;
+}
+
+span.glyphicon {
+position: absolute;
+left: 20px;
+top: 12px
+}

@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <form (ngSubmit)="onAddThing(f)" #f="ngForm">  
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="What to do..."
+              name="newItem"
+              id="newItem"
+              ngModel
+              required>
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="submit"
+                [disabled]="!f.valid">Add!</button>
+              </span>
+            </div>
+            <!-- /input-group -->
+          </form>
+      <hr>
+      <ul class="list-group">
+          <app-todo-item 
+          *ngFor ="let todo of toDoThings"
+          [todo]="todo"
+          >
+          </app-todo-item>
+        </ul>
+    </div>
+  </div>
+</div>
+
